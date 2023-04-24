@@ -1,0 +1,12 @@
+<div *ngIf="product" class="container-fluid p-5 d-flex justify-content-center">
+  <div
+    class="d-flex align-items-center flex-column"
+    style="width: 75ch; max-width: 90%"
+  >
+    <img [src]="product.img" alt="" class="w-75" />
+    <h1>{{ product.product_name }}</h1>
+    <p>
+      {{ product.description }}
+    </p>
+  </div>
+</div>

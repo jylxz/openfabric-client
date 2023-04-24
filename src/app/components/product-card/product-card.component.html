@@ -1,0 +1,19 @@
+<div *ngIf="product" class="card position-relative" style="width: 16rem">
+  <img [src]="product.img" alt="" class="card-img-top card-img-contain" />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.product_name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <div class="d-flex justify-content-between">
+      <a routerLink="products/{{product._id}}" class="btn btn-dark">Details</a>
+      <button class="btn" (click)="toggleMenu()">
+        <i class="bi bi-three-dots-vertical"></i>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="menuOpen" class="position-absolute" style="width:100%; height:100%" (click)="closeMenu()">
+    <div class="position-absolute bg-dark end-0 rounded" style="width:12rem; bottom: 4rem" (click)="stopPropagation($event)">
+      <button routerLink="edit/{{product._id}}" class="btn text-white" style="width: 100%">Edit product</button>
+      <button class="btn text-white" style="width: 100%" (click)="deleteProduct()">Delete product</button>
+    </div>
+  </div>
+</div>

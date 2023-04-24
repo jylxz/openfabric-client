@@ -1,0 +1,4 @@
+<div class="p-5">
+  <h1>Edit {{product?._id}}</h1>
+  <app-product-form [product]="product" *ngIf="product" [onSubmit]="onSubmit"> </app-product-form>
+</div>

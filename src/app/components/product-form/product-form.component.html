@@ -1,0 +1,19 @@
+<form>
+  <div class="mb-3">
+    <label for="productName" class="form-label">Product name</label>
+    <input type="text" id="productName" class="form-control" [formControl]="product_name">
+  </div>
+  <div class="mb-3">
+    <label for="img" class="form-label">Image</label>
+    <input type="text" id="img" class="form-control" [formControl]="img">
+  </div>
+  <div class="mb-3">
+    <label for="description">Description</label>
+    <textarea id="description" class="form-control" [formControl]="description"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="access">Access Token</label>
+    <input type="text" id="access" class="form-control" [formControl]="access_token">
+  </div>
+  <button type="button" class="btn bg-dark text-white" (click)="onSubmit(createProductObject(), access_token.value)">Submit</button>
+</form>
