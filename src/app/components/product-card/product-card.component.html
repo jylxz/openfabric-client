@@ -2,7 +2,7 @@
   <img [src]="product.img" alt="" class="card-img-top card-img-contain" />
   <div class="card-body">
     <h5 class="card-title">{{ product.product_name }}</h5>
-    <p class="card-text">{{ product.description }}</p>
+    <p class="card-text text-clamp">{{ product.description }}</p>
     <div class="d-flex justify-content-between">
       <a routerLink="products/{{product._id}}" class="btn btn-dark">Details</a>
       <button class="btn" (click)="toggleMenu()">
